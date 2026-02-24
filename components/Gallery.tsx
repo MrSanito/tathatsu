@@ -8,7 +8,7 @@ export default function Gallery() {
   const images = [
     { src: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&auto=format&fit=crop", alt: "Clinic Interior" },
     { src: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&auto=format&fit=crop", alt: "Treatment Room" },
-    { src: "https://images.unsplash.com/photo-1598256989800-fea5f062a4ae?w=800&auto=format&fit=crop", alt: "Advanced Equipment" },
+    { src: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&auto=format&fit=crop", alt: "Advanced Equipment" },
     { src: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&auto=format&fit=crop", alt: "Happy Smiles" },
   ];
 
