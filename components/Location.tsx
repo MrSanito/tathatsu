@@ -58,7 +58,7 @@ export default function Location() {
               </div>
               <div>
                 <h3 className="font-bold text-xl mb-2">Call Us</h3>
-                <p className="text-gray-600">+91 00000 00000</p>
+                <p className="text-gray-600">+91 82008 72831</p>
                 <p className="text-sm text-gray-500 mt-1">For immediate assistance</p>
               </div>
             </div>

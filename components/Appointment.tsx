@@ -24,7 +24,7 @@ export default function Appointment() {
     // Format message
     const msg = `Hello Tathastu Dental Clinic,\n\nI would like to book an appointment.\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Service:* ${formData.service || "General"}\n*Date:* ${formData.date}\n*Time:* ${formData.time}\n*Message:* ${formData.message || "N/A"}`;
     
-    const whatsappLink = `https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(msg)}`;
+    const whatsappLink = `https://wa.me/918200872831?text=${encodeURIComponent(msg)}`;
     window.open(whatsappLink, '_blank');
   };
 
@@ -66,7 +66,7 @@ export default function Appointment() {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                  <input required type="tel" name="phone" onChange={handleChange} className="w-full border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition" placeholder="+91 00000 00000" />
+                  <input required type="tel" name="phone" onChange={handleChange} className="w-full border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition" placeholder="+91 82008 72831" />
                 </div>
               </div>
 

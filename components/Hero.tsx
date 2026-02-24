@@ -41,7 +41,7 @@ export default function Hero() {
             <motion.a 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="https://wa.me/91XXXXXXXXXX?text=Hello%20Tathastu%20Dental%20Clinic,%20I%20would%20like%20to%20know%20more."
+              href="https://wa.me/918200872831?text=Hello%20Tathastu%20Dental%20Clinic,%20I%20would%20like%20to%20know%20more."
               target="_blank"
               rel="noreferrer"
               className="bg-[#25D366] hover:bg-[#1EBE55] text-white rounded-xl px-6 py-4 font-semibold shadow-lg shadow-green-500/30 flex items-center gap-2 transition"

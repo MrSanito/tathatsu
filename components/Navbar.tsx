@@ -62,7 +62,7 @@ export default function Navbar() {
           </ul>
           
           <a
-            href="https://wa.me/91XXXXXXXXXX?text=Hello%20Tathastu%20Dental%20Clinic,%20I%20want%20to%20book%20an%20appointment."
+            href="https://wa.me/918200872831?text=Hello%20Tathastu%20Dental%20Clinic,%20I%20want%20to%20book%20an%20appointment."
             target="_blank"
             rel="noreferrer"
             className="bg-primary hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl font-medium transition-all shadow-md shadow-blue-500/20 flex items-center gap-2 text-sm"
@@ -102,7 +102,7 @@ export default function Navbar() {
             ))}
             <li className="px-6 py-4 mt-2 border-t border-gray-50">
               <a
-                href="https://wa.me/91XXXXXXXXXX?text=Hello%20Tathastu%20Dental%20Clinic,%20I%20want%20to%20book%20an%20appointment."
+                href="https://wa.me/918200872831?text=Hello%20Tathastu%20Dental%20Clinic,%20I%20want%20to%20book%20an%20appointment."
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center justify-center gap-2 w-full bg-primary text-white py-3 rounded-xl font-medium"
