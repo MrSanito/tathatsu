@@ -60,12 +60,13 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.2 }}
           className="relative w-full h-[400px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl"
         >
-          {/* Fallback layout without real image to look premium */}
-          <div className="absolute inset-0 bg-blue-100/50 flex items-center justify-center p-8">
-            <div className="w-full h-full bg-blue-200/50 rounded-2xl flex items-center justify-center">
-              <span className="text-blue-400 font-medium">Smiling Patient / Clinic Image</span>
-            </div>
-          </div>
+          <Image 
+            src="/hero-image.png" 
+            alt="Tathastu Dental Clinic - Professional Care"
+            fill
+            className="object-cover"
+            priority
+          />
         </motion.div>
 
       </div>

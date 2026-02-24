@@ -63,13 +63,18 @@ export default function Location() {
             </div>
           </div>
 
-          {/* Map Embed Placeholder */}
-          <div className="w-full h-[400px] bg-gray-200 rounded-2xl overflow-hidden shadow-inner relative group">
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-500 p-6 text-center">
-              <MapPin size={48} className="mb-4 text-gray-400 group-hover:text-primary transition-colors" />
-              <p className="font-medium text-lg text-gray-600">Google Map Placeholder</p>
-              <p className="text-sm mt-2">Replace with actual iframe in production.</p>
-            </div>
+          {/* Map Embed */}
+          <div className="w-full h-[350px] md:h-full min-h-[400px] bg-gray-200 rounded-2xl overflow-hidden shadow-inner relative">
+            <iframe 
+              src={siteData.googleMapsEmbedUrl} 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen={true} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              className="absolute inset-0"
+            ></iframe>
           </div>
 
         </div>

@@ -2,13 +2,14 @@
 
 import { motion } from "framer-motion";
 import { Camera } from "lucide-react";
+import Image from "next/image";
 
 export default function Gallery() {
   const images = [
-    { src: "/placeholder.jpg", alt: "Clinic Interior" },
-    { src: "/placeholder.jpg", alt: "Treatment Room" },
-    { src: "/placeholder.jpg", alt: "Advanced Equipment" },
-    { src: "/placeholder.jpg", alt: "Happy Smiles" },
+    { src: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&auto=format&fit=crop", alt: "Clinic Interior" },
+    { src: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&auto=format&fit=crop", alt: "Treatment Room" },
+    { src: "https://images.unsplash.com/photo-1598256989800-fea5f062a4ae?w=800&auto=format&fit=crop", alt: "Advanced Equipment" },
+    { src: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&auto=format&fit=crop", alt: "Happy Smiles" },
   ];
 
   return (
@@ -38,11 +39,8 @@ export default function Gallery() {
               whileHover={{ scale: 1.05, zIndex: 10 }}
               className="relative aspect-square rounded-2xl overflow-hidden shadow-sm bg-blue-100/50 flex items-center justify-center cursor-pointer group"
             >
-              {/* Replace with actual Next Image when assets are ready */}
-              <div className="text-blue-400 font-medium text-center p-4">
-                {img.alt}
-              </div>
-              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition duration-300" />
+              <Image src={img.src} alt={img.alt} fill className="object-cover" />
+              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition duration-300 z-10" />
             </motion.div>
           ))}
         </div>
