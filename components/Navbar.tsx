@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
+import { siteData } from "@/data/siteData";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,8 +43,8 @@ export default function Navbar() {
         
         {/* Logo */}
         <a href="#" onClick={(e) => scrollToSection(e, 'top')} className="text-xl md:text-2xl font-bold text-primary flex flex-col md:flex-row md:items-center md:gap-2 leading-tight">
-          <span>Tathastu<span className="text-accent">.</span></span>
-          <span className="text-xs md:text-sm font-medium text-gray-500 hidden md:block">Dental Clinic and Implant Center</span>
+          <span>{siteData.clinicName}<span className="text-accent">.</span></span>
+          <span className="text-xs md:text-sm font-medium text-gray-500 hidden md:block">{siteData.clinicSubtitle}</span>
         </a>
 
         {/* Desktop Nav */}
@@ -63,7 +64,7 @@ export default function Navbar() {
           </ul>
           
           <a
-            href="https://wa.me/918200872831?text=Hello%20Tathastu%20Dental%20Clinic,%20I%20want%20to%20book%20an%20appointment."
+            href={`https://wa.me/91${siteData.phone}?text=${encodeURIComponent(siteData.whatsappMessage)}`}
             target="_blank"
             rel="noreferrer"
             className="bg-primary hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl font-medium transition-all shadow-md shadow-blue-500/20 flex items-center gap-2 text-sm"
@@ -103,7 +104,7 @@ export default function Navbar() {
             ))}
             <li className="px-6 py-4 mt-2 border-t border-gray-50">
               <a
-                href="https://wa.me/918200872831?text=Hello%20Tathastu%20Dental%20Clinic,%20I%20want%20to%20book%20an%20appointment."
+                href={`https://wa.me/91${siteData.phone}?text=${encodeURIComponent(siteData.whatsappMessage)}`}
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center justify-center gap-2 w-full bg-primary text-white py-3 rounded-xl font-medium"

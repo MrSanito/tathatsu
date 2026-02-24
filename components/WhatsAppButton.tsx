@@ -2,11 +2,12 @@
 
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
+import { siteData } from "@/data/siteData";
 
 export default function WhatsAppButton() {
   return (
     <motion.a
-      href="https://wa.me/918200872831?text=Hello%20Tathastu%20Dental%20Clinic,%20I%20want%20to%20book%20an%20appointment."
+      href={`https://wa.me/91${siteData.phone}?text=${encodeURIComponent(siteData.whatsappMessage)}`}
       target="_blank"
       rel="noreferrer"
       initial={{ scale: 0.9, opacity: 0 }}

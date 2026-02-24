@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Stethoscope, HeartHandshake, ShieldCheck } from "lucide-react";
+import { siteData } from "@/data/siteData";
 
 export default function About() {
   const cards = [
@@ -34,10 +35,10 @@ export default function About() {
             transition={{ duration: 0.7 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-dark mb-6">
-              Expert Care by <span className="text-primary">Dr. Avneesh Saxena</span> & Team
+              Expert Care by <span className="text-primary">{siteData.doctorName}</span> & Team
             </h2>
             <p className="text-gray-600 mb-6 text-lg">
-              Tathastu Dental Clinic and Implant Center in Gotri, Vadodara provides comprehensive dental care focusing on tooth preservation, modern technology, and patient comfort.
+              {siteData.aboutDescription}
             </p>
             <p className="text-gray-500 mb-8">
               We understand that visiting the dentist can be daunting. That&apos;s why our team is dedicated to providing a comfortable, painless, and transparent experience from the moment you walk through our doors.

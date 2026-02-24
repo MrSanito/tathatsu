@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Send } from "lucide-react";
+import { siteData } from "@/data/siteData";
 
 export default function Appointment() {
   const [formData, setFormData] = useState({
@@ -22,9 +23,9 @@ export default function Appointment() {
     e.preventDefault();
     
     // Format message
-    const msg = `Hello Tathastu Dental Clinic,\n\nI would like to book an appointment.\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Service:* ${formData.service || "General"}\n*Date:* ${formData.date}\n*Time:* ${formData.time}\n*Message:* ${formData.message || "N/A"}`;
+    const msg = `Hello ${siteData.clinicName} Clinic,\n\nI would like to book an appointment.\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Service:* ${formData.service || "General"}\n*Date:* ${formData.date}\n*Time:* ${formData.time}\n*Message:* ${formData.message || "N/A"}`;
     
-    const whatsappLink = `https://wa.me/918200872831?text=${encodeURIComponent(msg)}`;
+    const whatsappLink = `https://wa.me/91${siteData.phone}?text=${encodeURIComponent(msg)}`;
     window.open(whatsappLink, '_blank');
   };
 
@@ -47,11 +48,11 @@ export default function Appointment() {
             <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <div className="bg-white/20 p-2 rounded-lg">🗓️</div>
-                <p className="font-medium">Monday - Saturday</p>
+                <p className="font-medium">{siteData.workingDays}</p>
               </div>
               <div className="flex items-center gap-4">
                 <div className="bg-white/20 p-2 rounded-lg">⏰</div>
-                <p className="font-medium">10:00 AM - 8:00 PM</p>
+                <p className="font-medium">{siteData.workingHours}</p>
               </div>
             </div>
           </div>
@@ -66,7 +67,7 @@ export default function Appointment() {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                  <input required type="tel" name="phone" onChange={handleChange} className="w-full border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition" placeholder="+91 82008 72831" />
+                  <input required type="tel" name="phone" onChange={handleChange} className="w-full border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition" placeholder={siteData.displayPhone} />
                 </div>
               </div>
 

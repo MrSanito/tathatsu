@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { MessageSquare, Calendar } from "lucide-react";
 import Image from "next/image";
+import { siteData } from "@/data/siteData";
 
 export default function Hero() {
   const scrollToAppointment = () => {
@@ -21,10 +22,10 @@ export default function Hero() {
           className="flex flex-col gap-6"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
-            Advanced Dental Care with Precision & Compassion
+            {siteData.heroHeadline}
           </h1>
           <p className="text-lg md:text-xl text-gray-600 font-medium">
-            Implants | Root Canal | Braces | Cosmetic Dentistry in Gotri, Vadodara
+            {siteData.heroSubheadline}
           </p>
           
           <div className="flex flex-wrap gap-4 mt-4">
@@ -41,7 +42,7 @@ export default function Hero() {
             <motion.a 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="https://wa.me/918200872831?text=Hello%20Tathastu%20Dental%20Clinic,%20I%20would%20like%20to%20know%20more."
+              href={`https://wa.me/91${siteData.phone}?text=${encodeURIComponent(siteData.whatsappMessageDetails)}`}
               target="_blank"
               rel="noreferrer"
               className="bg-[#25D366] hover:bg-[#1EBE55] text-white rounded-xl px-6 py-4 font-semibold shadow-lg shadow-green-500/30 flex items-center gap-2 transition"

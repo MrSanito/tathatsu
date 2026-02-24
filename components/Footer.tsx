@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Twitter, MapPin, Phone, Mail } from "lucide-react";
+import { siteData } from "@/data/siteData";
 
 export default function Footer() {
   return (
@@ -8,21 +9,27 @@ export default function Footer() {
         {/* Brand */}
         <div className="space-y-4">
           <h3 className="text-2xl font-bold text-white mb-2">
-            Tathastu<span className="text-primary">.</span> <span className="text-lg font-medium text-gray-400 block mt-1">Dental Clinic and Implant Center</span>
+            {siteData.clinicName}<span className="text-primary">.</span> <span className="text-lg font-medium text-gray-400 block mt-1">{siteData.clinicSubtitle}</span>
           </h3>
           <p className="text-sm leading-relaxed text-gray-400">
-            Advanced Dental Care with Precision & Compassion in Gotri, Vadodara.
+            {siteData.metaDescription}
           </p>
           <div className="flex gap-4 pt-4">
-            <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-primary text-white transition-colors">
-              <Facebook size={18} />
-            </a>
-            <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-primary text-white transition-colors">
-              <Instagram size={18} />
-            </a>
-            <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-primary text-white transition-colors">
-              <Twitter size={18} />
-            </a>
+            {siteData.socials.facebook && (
+              <a href={siteData.socials.facebook} className="p-2 bg-gray-800 rounded-full hover:bg-primary text-white transition-colors">
+                <Facebook size={18} />
+              </a>
+            )}
+            {siteData.socials.instagram && (
+              <a href={siteData.socials.instagram} className="p-2 bg-gray-800 rounded-full hover:bg-primary text-white transition-colors">
+                <Instagram size={18} />
+              </a>
+            )}
+            {siteData.socials.twitter && (
+              <a href={siteData.socials.twitter} className="p-2 bg-gray-800 rounded-full hover:bg-primary text-white transition-colors">
+                <Twitter size={18} />
+              </a>
+            )}
           </div>
         </div>
 
@@ -56,15 +63,15 @@ export default function Footer() {
            <div className="space-y-4 text-sm">
              <p className="flex items-start gap-3">
                <MapPin size={18} className="text-primary shrink-0 mt-0.5" />
-               <span className="text-gray-400">E 201, Kalpvrukhsh Complex, near Gotri GEB Substation, Vadodara</span>
+               <span className="text-gray-400">{siteData.addressShort}</span>
              </p>
              <p className="flex items-center gap-3">
                <Phone size={18} className="text-primary shrink-0" />
-               <span className="text-gray-400">+91 82008 72831</span>
+               <span className="text-gray-400">{siteData.displayPhone}</span>
              </p>
              <p className="flex items-center gap-3">
                <Mail size={18} className="text-primary shrink-0" />
-               <span className="text-gray-400">info@tathastudental.in</span>
+               <span className="text-gray-400">{siteData.email}</span>
              </p>
            </div>
         </div>
@@ -72,7 +79,7 @@ export default function Footer() {
       </div>
 
       <div className="container mx-auto text-center text-sm text-gray-500">
-        <p>&copy; {new Date().getFullYear()} Tathastu Dental Clinic and Implant Center. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} {siteData.fullClinicName}. All rights reserved.</p>
         <p className="mt-2 text-xs">Developed passionately for local care.</p>
       </div>
     </footer>

@@ -2,6 +2,7 @@
 
 import { MapPin, Phone, Clock, Navigation } from "lucide-react";
 import { motion } from "framer-motion";
+import { siteData } from "@/data/siteData";
 
 export default function Location() {
   return (
@@ -24,14 +25,12 @@ export default function Location() {
               </div>
               <div>
                 <h3 className="font-bold text-xl mb-2">Location</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  E 201, Kalpvrukhsh Complex, <br />
-                  near Gotri GEB Substation, besides GMERS Medical College, <br />
-                  Gotri Road, Vadodara.
+                <p className="text-gray-600 leading-relaxed max-w-[300px]">
+                  {siteData.address}
                 </p>
                 <motion.a 
                   whileHover={{ scale: 1.02 }}
-                  href="https://maps.google.com/?q=Tathastu+Dental+Clinic+Gotri"
+                  href={siteData.googleMapsLink}
                   target="_blank"
                   className="mt-4 inline-flex items-center gap-2 text-primary font-medium bg-blue-50 px-4 py-2 rounded-lg"
                 >
@@ -46,9 +45,9 @@ export default function Location() {
               </div>
               <div>
                 <h3 className="font-bold text-xl mb-2">Hours</h3>
-                <p className="text-gray-600">Monday - Saturday</p>
-                <p className="text-dark font-medium">10:00 AM – 8:00 PM</p>
-                <p className="text-sm text-gray-500 mt-1">Sunday: Closed / By Appointment</p>
+                <p className="text-gray-600">{siteData.workingDays}</p>
+                <p className="text-dark font-medium">{siteData.workingHours}</p>
+                <p className="text-sm text-gray-500 mt-1">{siteData.weekendHours}</p>
               </div>
             </div>
 
@@ -58,7 +57,7 @@ export default function Location() {
               </div>
               <div>
                 <h3 className="font-bold text-xl mb-2">Call Us</h3>
-                <p className="text-gray-600">+91 82008 72831</p>
+                <p className="text-gray-600">{siteData.displayPhone}</p>
                 <p className="text-sm text-gray-500 mt-1">For immediate assistance</p>
               </div>
             </div>
