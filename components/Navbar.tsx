@@ -41,8 +41,9 @@ export default function Navbar() {
       <div className="container mx-auto px-6 max-w-7xl flex items-center justify-between">
         
         {/* Logo */}
-        <a href="#" onClick={(e) => scrollToSection(e, 'top')} className="text-2xl font-bold text-primary flex items-center gap-2">
+        <a href="#" onClick={(e) => scrollToSection(e, 'top')} className="text-xl md:text-2xl font-bold text-primary flex flex-col md:flex-row md:items-center md:gap-2 leading-tight">
           <span>Tathastu<span className="text-accent">.</span></span>
+          <span className="text-xs md:text-sm font-medium text-gray-500 hidden md:block">Dental Clinic and Implant Center</span>
         </a>
 
         {/* Desktop Nav */}

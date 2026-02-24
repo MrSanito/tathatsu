@@ -39,7 +39,7 @@ export default function WhyChooseUs() {
           {/* Background pattern */}
           <div className="absolute top-0 right-0 opacity-10 blur-xl w-64 h-64 bg-white rounded-full translate-x-1/2 -translate-y-1/2" />
           
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 relative z-10">Why Choose Tathastu?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 relative z-10">Why Choose Tathastu Dental Clinic & Implant Center?</h2>
           
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
             {reasons.map((r, i) => (

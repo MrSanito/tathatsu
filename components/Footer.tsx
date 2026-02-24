@@ -8,7 +8,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="space-y-4">
           <h3 className="text-2xl font-bold text-white mb-2">
-            Tathastu<span className="text-primary">.</span>
+            Tathastu<span className="text-primary">.</span> <span className="text-lg font-medium text-gray-400 block mt-1">Dental Clinic and Implant Center</span>
           </h3>
           <p className="text-sm leading-relaxed text-gray-400">
             Advanced Dental Care with Precision & Compassion in Gotri, Vadodara.
@@ -72,7 +72,7 @@ export default function Footer() {
       </div>
 
       <div className="container mx-auto text-center text-sm text-gray-500">
-        <p>&copy; {new Date().getFullYear()} Tathastu Dental Clinic & Implant Center. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Tathastu Dental Clinic and Implant Center. All rights reserved.</p>
         <p className="mt-2 text-xs">Developed passionately for local care.</p>
       </div>
     </footer>

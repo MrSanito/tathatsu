@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Tathastu Dental Clinic | Gotri, Vadodara",
+  title: "Tathastu Dental Clinic and Implant Center | Gotri, Vadodara",
   description: "Advanced Dental Care with Precision & Compassion at Tathastu Dental Clinic and Implant Center in Gotri, Vadodara.",
 };
 
